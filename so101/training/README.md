@@ -1,5 +1,9 @@
 # Policy training
 
+Evidence status: dataset counts and historical run anecdotes below are inherited
+configuration context, not locally verified results. See [verification](../../docs/verification.md)
+and the [Nebius evidence checklist](../../docs/nebius-handoff.md).
+
 Fine-tune LeRobot policies with `lerobot-train` on the **pizza Hub dataset**. Laptop runs are **CPU smokes (≤200 steps)**. The recommended GPU path is a [DevLab](../docs/devlab.md) (interactive `lerobot-train` on CUDA). This page is the **Job / Docker** path: checkpoints from a Job land on a **shared POSIX filesystem**. Default Job GPU is **RTX PRO 6000**; L40S and H100 are alternatives.
 
 **Arm rollout after training:** [Train and deploy](../docs/train-and-deploy.md)
@@ -217,8 +221,7 @@ The image entrypoint, if it finds `$OUTPUT_DIR/checkpoints/last/pretrained_model
 ```bash
 lerobot-train \
   --config_path=.../train_config.json \
-  --resume=true \
-  --policy.device=cuda
+  --resume=true
 ```
 
 Equivalent CLI:

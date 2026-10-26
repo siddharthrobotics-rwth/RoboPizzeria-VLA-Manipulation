@@ -1,3 +1,5 @@
+# Evidence note: run timings/losses in comments below are inherited anecdotes.
+# Raw logs/checkpoints are absent locally; these are not verified portfolio results.
 # SmolVLA fine-tune from lerobot/smolvla_base (LeRobot 0.6.1).
 #
 # Same dataset as ACT: robotpizzacup/robot-pizza-cup-1

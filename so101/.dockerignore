@@ -11,3 +11,17 @@ calibration
 station.env
 **/__pycache__
 **/.DS_Store
+.venv*
+checkpoints
+wandb
+logs
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.parquet
+*.mp4
+.aws
+.codex
+.agents

@@ -22,14 +22,14 @@ Run commands from `elrobot` unless a step says `cd norma-core/...`.
 
 Trainer: [`software/ai/smolvla_py`](https://github.com/norma-core/norma-core/tree/v0.1.0-beta.10/software/ai/smolvla_py). It fine-tunes `lerobot/smolvla_base` on Station parquet files. Requires **CUDA**. Run it in a JupyterLab DevLab terminal (recommended; same Nebius project as the SO-101 [DevLab guide](../../so101/docs/devlab.md), default GPU RTX PRO 6000) or on another CUDA machine. The SO-101 policy-server proxy in that guide is for LeRobot, not this trainer.
 
-The bundled script hardcodes **6** state values and **6** actions (`--motor-ids` defaults to `1,2,3,4,5,6`). ElRobot has **8** servos. A checkpoint from the default settings is SO-101-sized — do not treat it as a full 8-DoF ElRobot policy until motor dimensions match the arm.
+The bundled script hardcodes **6** state values and **6** actions (the inference script defaults `--motor-ids` to `1,2,3,4,5,6`; the trainer has no such option). ElRobot has **8** servos. A checkpoint from the default settings is SO-101-sized — do not treat it as a full 8-DoF ElRobot policy until motor dimensions match the arm.
 
 ```bash
 cd norma-core/software/ai/smolvla_py
 uv sync
 uv run python scripts/train.py \
   --steps 30000 --batch-size 64 \
-  --parquets ../../../../data/elrobot-pizza.parquet \
+  --parquets ../../../../../data/elrobot-pizza.parquet \
   --output checkpoints/run
 ```
 

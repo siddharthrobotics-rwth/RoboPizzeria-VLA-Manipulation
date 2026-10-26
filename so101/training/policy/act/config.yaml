@@ -1,3 +1,5 @@
+# Evidence note: run timings/losses in comments below are inherited anecdotes.
+# Raw logs/checkpoints are absent locally; these are not verified portfolio results.
 # ACT from scratch on robotpizzacup/robot-pizza-cup-1 (LeRobot 0.6.1).
 #
 # Dataset: 397 episodes, 176039 frames, 30 fps, one task, SO-101 follower.
